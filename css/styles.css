@@ -151,13 +151,14 @@ section {
 
    color: var(--title-text-color);
 
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .nav-link:hover,
 .nav-link:focus {
    color: var(--accent-color);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current {
@@ -177,6 +178,7 @@ section {
    border-radius: 2px;
    background-color: var(--accent-color);
    
+   
 }
 
 
@@ -186,6 +188,8 @@ section {
    padding: 32px 0;
 
    color: var(--primary-text-color);
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -196,13 +200,13 @@ section {
    color: var(--accent-color);
    fill: var(--accent-color);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-icon {
    margin-right: 10px;
    fill: currentColor;
 
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -254,17 +258,18 @@ section {
    letter-spacing: 0.06em;
 
    color: var(--white-color);
-   background: var(--accent-color);
+   background-color: var(--accent-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
 
 .button:focus,
 .button:hover {
-   background: var(--button-focus);
+   background-color: var(--button-focus);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -274,11 +279,14 @@ section {
    width: 100%;
    height: 100%;
    background-color: var(--modal-bg-color);
+
+   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
    opacity: 0;
    pointer-events: none;
+   visibility: hidden;
 }
 
 .modal {
@@ -311,6 +319,8 @@ section {
    border: 1px solid rgba(0, 0, 0, 0.1);
    background-color: var(--white-color);
    fill: var(--black-color);
+
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -318,7 +328,6 @@ section {
 .modal-button:focus {
    fill: var(--accent-color);
    
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* < !-------------------- Особливості ----------------------> */
@@ -519,6 +528,9 @@ section {
    height: 44px;
    fill: var(--social-network-color);
    background-color: var(--white-color);
+   border-radius: 50%;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
    /* outline: 2px solid green; */
 
@@ -529,11 +541,9 @@ section {
 .network-link:focus,
 .footer-network-link:hover,
 .footer-network-link:focus {
-   border-radius: 50%;
    fill: #FFFFFF;
    background-color: var(--accent-color);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -557,6 +567,8 @@ section {
    border-radius: 4px;
 
    color: var(--social-network-color);
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -574,7 +586,6 @@ section {
    color: var(--accent-color);
    border-color: var(--accent-color);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -599,13 +610,14 @@ section {
    letter-spacing: 0.03em;
 
    color: var(--white-color);
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:hover, 
 .adress-link:focus {
    color: var(--accent-color);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list {
@@ -615,6 +627,8 @@ section {
    letter-spacing: 0.03em;
 
    color: var(--adress-color);
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list {
@@ -625,7 +639,6 @@ section {
 .footer-list:focus {
    color: var(--accent-color);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -653,6 +666,8 @@ section {
    height: 44px;
    fill: var(--white-color);
    background-color: var(--bg-footer-icon-color);
+
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -693,10 +708,11 @@ section {
    text-align: center;
    letter-spacing: 0.03em;
 
-   background: var(--secondary-bg-color);
+   background-color: var(--secondary-bg-color);
    color: var(--title-text-color);
-   
-   
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .portfolio-buttons > .item:not(:first-child) {
@@ -705,20 +721,10 @@ section {
 
 .portfolio-button:hover,
 .portfolio-button:focus {
-   border-radius: 4px;
-
-   font-family: inherit;
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 1.62;
-   text-align: center;
-   letter-spacing: 0.03em;
-
-   background: var(--accent-color);
+   background-color: var(--accent-color);
    color: var(--white-color);
    box-shadow: var(--button-shadow);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-title {
@@ -747,13 +753,14 @@ section {
 
 .pf-links {
    display: block;
+
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pf-links:hover,
 .pf-links:focus {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cards {
@@ -773,15 +780,12 @@ section {
 
 .pf-thumb {
    position: relative;
-   
    overflow: hidden;
 }
 
 .pf-links:hover .overlay,
 .pf-links:focus .overlay {
    transform: translateY(0);
-
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -793,8 +797,9 @@ section {
    height: 100%;
    background-color: var(--pf-overflow-color);
 
-   transform: translateY(100%);
- 
+   transform: translateY(101%);
+
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-text {
